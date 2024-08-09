@@ -133,17 +133,17 @@ img.home-image {
     width: 100%;
 }
 
-h1 {
+h2 {
     text-align: center;
     padding-top: 20px;
 }
 
-h2.revolution {
+h3.revolution {
     text-decoration: underline;
     text-decoration-color: red;
 }
 
-h2.AI {
+h3.AI {
     text-decoration: underline;
     text-decoration-color: blue;
 }
@@ -172,4 +172,56 @@ h2.AI {
 
 span.and {
     font-size: 50px;
+}
+
+.pickup-news {
+    position: relative;
+    width: 500px;
+}
+
+.pickup-news img {
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 黒の透過効果を追加 */
+    z-index: 1; /* オーバーレイが画像の上に表示されるように設定 */
+}
+
+.topnews {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    z-index: 2;
+    align-items: center; /* 垂直方向に中央揃え */
+    justify-content: center; /* 水平方向に中央揃え */
+}
+
+.topnews-title {
+    white-space: nowrap; /* テキストを1行に制限 */
+    overflow: hidden; /* 溢れた部分を非表示 */
+    text-overflow: ellipsis; /* "..."で省略表示 */
+    max-width: calc(100% - 30px); /* 矢印のスペースを考慮してタイトルの最大幅を設定 */
+    width: 50%;
+    font-size: 30px;
+}
+
+.news-arrow {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    flex-shrink: 0; /* 矢印が縮小されないようにする */
 }
