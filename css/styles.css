@@ -14,7 +14,7 @@ nav {
     align-items: center; /* ナビゲーションバー内のアイテムを垂直方向に中央揃え */
     background-color: white; /* ナビゲーションバーの背景色を白に設定 */
     padding: 0; /* ナビゲーションバーの余白をゼロに設定 */
-    height: 100px; /* ナビゲーションバー全体の高さを100pxに設定 */
+    height: 80px; /* ナビゲーションバー全体の高さを100pxに設定 */
 }
 
 .logo {
