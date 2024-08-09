@@ -138,6 +138,16 @@ h1 {
     padding-top: 20px;
 }
 
+h2.revolution {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+h2.AI {
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
 .circle-container {
     display: flex; /* 子要素を横に並べるためにflexboxを使用 */
     justify-content: center; /* 円同士を左右均等に配置 */
@@ -149,11 +159,17 @@ h1 {
     height: 300px; /* 円の高さを設定 */
     margin: 0 20px;
     border-radius: 50%; /* 丸くするためにborder-radiusを50%に設定 */
-    background-color: lightblue; /* 円の背景色を設定 */
-    display: flex; /* 中の文字を中央に揃えるためにflexboxを使用 */
+    display: flex; /* フレックスボックスを使用して中央揃え */
+    flex-direction: column; /* 要素を縦に並べる */
     justify-content: center; /* 水平方向に中央揃え */
     align-items: center; /* 垂直方向に中央揃え */
     font-size: 20px; /* テキストのフォントサイズを設定 */
     color: black; /* テキストの色を設定 */
     text-align: center; /* テキストを中央に揃える */
+    border: 2px solid #d3d3d3; /* 枠線を薄いグレーに設定 */
+    box-shadow: 0 0 10px 5px rgba(211, 211, 211, 0.5); /* 薄いグレーでぼやけた影を追加 */
+}
+
+span.and {
+    font-size: 50px;
 }
