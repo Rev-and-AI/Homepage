@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif; /* フォントスタイルを設定 */
+    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Sans", "ヒラギノ角ゴシック", "Meiryo", sans-serif; /* フォントスタイルを設定 */
 }
 
 nav {
@@ -15,6 +15,13 @@ nav {
     background-color: white; /* ナビゲーションバーの背景色を白に設定 */
     padding: 0; /* ナビゲーションバーの余白をゼロに設定 */
     height: 80px; /* ナビゲーションバー全体の高さを100pxに設定 */
+    width: 100%;
+    position: fixed; /*ずっと上で固定*/
+    top:0;
+}
+
+main {
+    padding-top: 80px;
 }
 
 .logo {
@@ -58,7 +65,7 @@ nav {
 .nav-links .active a::after {
     content: '';
     position: absolute;
-    bottom: -5px; /* 下から5ピクセルの位置に配置 */
+    bottom: 0px;
     left: 0;
     width: 100%; /* リンクの幅に合わせる */
     height: 5px; /* 高さ5ピクセルの長方形 */
@@ -120,4 +127,33 @@ nav {
     .burger {
         display: block; /* モバイル表示時にはハンバーガーメニューを表示 */
     }
+}
+
+img.home-image {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.circle-container {
+    display: flex; /* 子要素を横に並べるためにflexboxを使用 */
+    justify-content: center; /* 円同士を左右均等に配置 */
+    align-items: center; /* 垂直方向に中央揃え */
+}
+
+.circle {
+    width: 300px; /* 円の幅を設定 */
+    height: 300px; /* 円の高さを設定 */
+    margin: 0 20px;
+    border-radius: 50%; /* 丸くするためにborder-radiusを50%に設定 */
+    background-color: lightblue; /* 円の背景色を設定 */
+    display: flex; /* 中の文字を中央に揃えるためにflexboxを使用 */
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+    font-size: 20px; /* テキストのフォントサイズを設定 */
+    color: black; /* テキストの色を設定 */
+    text-align: center; /* テキストを中央に揃える */
 }
