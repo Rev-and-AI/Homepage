@@ -43,12 +43,26 @@ nav {
     text-decoration: none; /* リンクの下線を削除 */
     font-size: 20px; /* リンクテキストのフォントサイズを20pxに設定 */
     padding: 0; /* リンクの左右に40pxの余白を設定し、クリック可能な領域を拡大 */
-    width: 200px;
+    width: 180px;
     display: flex; /* リンクテキストを中央揃えするためにフレックスボックスを使用 */
     justify-content: center; /* テキストを横方向に中央揃え */
     align-items: center; /* リンクテキストを縦方向に中央揃え */
     height: 100%; /* リンク全体の高さをナビゲーションバーと同じに設定 */
     text-align: center; /* リンクテキストを中央に揃える */
+}
+
+.nav-links .active a {
+    position: relative; /* 擬似要素の位置を正しく配置するためにrelativeを設定 */
+}
+
+.nav-links .active a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* 下から5ピクセルの位置に配置 */
+    left: 0;
+    width: 100%; /* リンクの幅に合わせる */
+    height: 5px; /* 高さ5ピクセルの長方形 */
+    background-color: yellow; /* 長方形の色を黄色に設定 */
 }
 
 .contact {
