@@ -6,6 +6,8 @@
 
 body {
     font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Sans", "ヒラギノ角ゴシック", "Meiryo", sans-serif; /* フォントスタイルを設定 */
+    background-image: url('../background.jpg');
+    background-size: cover;
 }
 
 nav {
@@ -168,6 +170,7 @@ h3.AI {
     text-align: center; /* テキストを中央に揃える */
     border: 2px solid #d3d3d3; /* 枠線を薄いグレーに設定 */
     box-shadow: 0 0 10px 5px rgba(211, 211, 211, 0.5); /* 薄いグレーでぼやけた影を追加 */
+    background-color: white;
 }
 
 span.and {
