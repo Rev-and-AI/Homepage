@@ -174,54 +174,121 @@ span.and {
     font-size: 50px;
 }
 
-.pickup-news {
+h2.pickup-news {
+    margin-top: 50px;
+}
+
+.news-container {
+    margin-top: 50px;
+    display: flex;
+    padding: 20px 30px; /* 左右に30pxの余白を追加 */
+    height: 350px;
+}
+
+.news-left {
+    width: 50%; /* 左側のニュース部分を半分使用 */
     position: relative;
-    width: 500px;
+    margin-right: 20px;
+    overflow: hidden; /* 子要素がはみ出さないようにする */
 }
 
-.pickup-news img {
+.top-news-link {
+    display: block;
     width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url('../top-news.jpeg'); /* 背景画像を設定 */
+    background-size: cover; /* 画像の縦横比を維持しつつ全体をカバー */
+    background-position: center; /* 画像の中央を表示 */
+    transition: opacity 0.3s ease; /* ホバー時のエフェクトをスムーズに */
 }
 
-.overlay {
+.top-news-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 黒の透過効果を追加 */
-    z-index: 1; /* オーバーレイが画像の上に表示されるように設定 */
-}
-
-.topnews {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    margin:0;
-    padding:0;
-    color: white;
-    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* 黒いオーバーレイ */
     display: flex;
-    z-index: 2;
-    align-items: center; /* 垂直方向に中央揃え */
-    justify-content: center; /* 水平方向に中央揃え */
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease; /* ホバー時のエフェクトをスムーズに */
 }
 
-.topnews-title {
-    white-space: nowrap; /* テキストを1行に制限 */
-    overflow: hidden; /* 溢れた部分を非表示 */
-    text-overflow: ellipsis; /* "..."で省略表示 */
-    max-width: calc(100% - 30px); /* 矢印のスペースを考慮してタイトルの最大幅を設定 */
-    width: 50%;
-    font-size: 30px;
-}
-
-.news-arrow {
+.top-news-overlay h2 {
     color: white;
-    font-size: 36px;
+    font-size: 24px;
+    text-align: center;
     font-weight: bold;
-    flex-shrink: 0; /* 矢印が縮小されないようにする */
+    padding: 20px;
+    white-space: nowrap; /* テキストを1行に制限 */
+    overflow: hidden; /* はみ出したテキストを非表示 */
+    text-overflow: ellipsis; /* はみ出した部分を省略記号に */
+    transition: opacity 0.3s ease; /* ホバー時のエフェクトをスムーズに */
+}
+
+.news-left:hover .top-news-link,
+.news-left:hover .top-news-overlay h2 {
+    opacity: 0.7; /* ホバー時に画像とテキストが薄くなる */
+}
+
+.news-right {
+    width: 50%; /* 右側のニュース部分を半分使用 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    margin-bottom: 15px;
+}
+
+.news-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* リンク全体にクリックエリアを広げる */
+    text-decoration: none;
+    color: black;
+    background-color: #f9f9f9; /* 背景色を設定 */
+    border-radius: 5px; /* 角を少し丸める */
+    transition: background-color 0.3s ease, color 0.3s ease; /* ホバー時のエフェクトをスムーズに */
+}
+
+.news-list a:hover {
+    background-color: #e0e0e0; /* 背景色を薄く変更 */
+    color: rgba(0, 0, 0, 0.7); /* テキスト色を薄くする */
+}
+
+.news-text {
+    flex-grow: 1;
+    white-space: nowrap; /* テキストを1行に制限 */
+    overflow: hidden; /* はみ出したテキストを非表示 */
+    text-overflow: ellipsis; /* はみ出した部分を省略記号に */
+}
+
+.arrow {
+    font-weight: bold;
+    margin-left: 10px; /* テキストと矢印の間に余白を追加 */
+    flex-shrink: 0; /* 矢印が縮まないように設定 */
+}
+
+.view-more {
+    align-self: flex-end;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.view-more:hover {
+    text-decoration: underline;
 }
