@@ -15,11 +15,12 @@ nav {
     justify-content: space-between; /* ロゴとリンクを左右に配置 */
     align-items: center; /* ナビゲーションバー内のアイテムを垂直方向に中央揃え */
     background-color: white; /* ナビゲーションバーの背景色を白に設定 */
-    padding: 0; /* ナビゲーションバーの余白をゼロに設定 */
+    padding: 0;
     height: 80px; /* ナビゲーションバー全体の高さを100pxに設定 */
     width: 100%;
-    position: fixed; /*ずっと上で固定*/
-    top:0;
+    position: fixed; /* ナビゲーションバーを画面上部に固定 */
+    top: 0;
+    z-index: 1000; /* ナビゲーションバーを前面に配置 */
 }
 
 main {
@@ -171,7 +172,13 @@ h3.AI {
     border: 2px solid #d3d3d3; /* 枠線を薄いグレーに設定 */
     box-shadow: 0 0 10px 5px rgba(211, 211, 211, 0.5); /* 薄いグレーでぼやけた影を追加 */
     background-color: white;
+    transition: transform 0.3s ease; /* 変形アニメーションのトランジションを設定 */
 }
+
+.circle:hover {
+    transform: scale(1.1); /* カーソルを合わせたときに110%に拡大 */
+}
+
 
 span.and {
     font-size: 50px;
