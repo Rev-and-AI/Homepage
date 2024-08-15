@@ -418,20 +418,6 @@ footer {
     margin: 10px 0; /* 連絡先情報の各行に上下のマージンを追加 */
 }
 
-.footer-social a {
-    display: inline-block;
-    margin-right: 15px;
-}
-
-.footer-social img {
-    width: 30px; /* ソーシャルアイコンの幅を設定 */
-    transition: opacity 0.3s ease; /* ホバー時のエフェクトをスムーズに */
-}
-
-.footer-social a:hover img {
-    opacity: 0.7; /* ホバー時にアイコンを少し透明にする */
-}
-
 .footer-bottom {
     text-align: center;
     margin-top: 20px;
