@@ -317,6 +317,8 @@ h2.pickup-news {
     text-decoration: none; /* リンクの下線を削除 */
     color: inherit; /* リンクテキストの色を継承 */
     display: block; /* リンク全体をクリック可能にするためにブロック要素に設定 */
+    height: 100%;
+    margin: 50px auto;
 }
 
 
@@ -328,7 +330,7 @@ h2.pickup-news {
     background-color: #f9f9f9; /* 背景色を設定 */
     border-radius: 10px; /* 角を丸める */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ぼやけた影を追加 */
-    margin-bottom: 30px; /* 各ボックスの間に余白を追加 */
+    margin-bottom: 0px; /* 各ボックスの間に余白を追加 */
     padding: 20px; /* 内部に余白を追加 */
     transition: transform 0.3s ease-in-out; /* ホバー時のエフェクトをスムーズに */
 }
@@ -408,6 +410,7 @@ footer {
     color: #fff; /* リンクの色を白に設定 */
     text-decoration: none; /* リンクの下線を削除 */
     transition: color 0.3s ease; /* ホバー時の色変化をスムーズにする */
+    height: 100%;
 }
 
 .footer-nav a:hover {
