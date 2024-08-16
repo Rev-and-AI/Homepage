@@ -27,6 +27,16 @@ main {
     padding-top: 80px;
 }
 
+h2 {
+    color: #fff; /* 文字色を白に設定 */
+    background-color: #333; /* 背景色を黒に設定 */
+    padding: 10px 20px; /* 上下に10px、左右に20pxのパディングを追加 */
+    margin: 0; /* 上下の余白を削除 */
+    text-align: center; /* テキストを中央に配置 */
+    width: 100%; /* 横幅を100%に設定 */
+    box-sizing: border-box; /* パディングを含む幅を指定 */
+}
+
 .logo {
     text-decoration: none;
     color: black; /* ロゴのテキスト色を黒に設定 */
@@ -137,7 +147,7 @@ img.home-image {
     width: 100%;
 }
 
-h2 {
+h3 {
     text-align: center;
     padding-top: 20px;
 }
@@ -152,10 +162,19 @@ h3.AI {
     text-decoration-color: blue;
 }
 
+h3.topnews-title {
+    font-size: 24px;
+    color: white;
+    white-space: nowrap; /* テキストを1行に制限 */
+    overflow: hidden; /* はみ出したテキストを非表示 */
+    text-overflow: ellipsis; /* はみ出した部分を省略記号に */
+}
+
 .circle-container {
     display: flex; /* 子要素を横に並べるためにflexboxを使用 */
     justify-content: center; /* 円同士を左右均等に配置 */
     align-items: center; /* 垂直方向に中央揃え */
+    margin: 30px auto;
 }
 
 .circle {
@@ -433,4 +452,76 @@ footer {
 
 .footer-bottom p {
     margin: 0; /* フッターボトムのパラグラフの余白を削除 */
+}
+
+/* contact.html 用の追加スタイル */
+.contact-section {
+    margin: 80px auto; /* 上部の余白を確保し、全体を中央揃え */
+    padding: 20px;
+    max-width: 800px; /* セクションの最大幅を設定 */
+    background-color: #f9f9f9; /* 背景色を設定 */
+    border-radius: 10px; /* 角を丸める */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ぼやけた影を追加 */
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* フォーム内の要素を縦に並べる */
+    gap: 20px; /* 各要素間に20pxの間隔を追加 */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* 内側の影を追加 */
+    transition: border-color 0.3s ease; /* フォーカス時のアニメーションを設定 */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #333; /* フォーカス時にボーダーの色を変更 */
+    outline: none; /* デフォルトのフォーカスリングを削除 */
+}
+
+.submit-button {
+    padding: 15px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #333; /* ボタンの背景色を設定 */
+    border: none;
+    border-radius: 5px; /* 角を丸める */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* ホバー時の背景色変更をスムーズに */
+}
+
+.submit-button:hover {
+    background-color: #555; /* ホバー時に背景色を変更 */
 }
