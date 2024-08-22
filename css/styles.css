@@ -1,195 +1,225 @@
-/* 全体の基本設定 */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* ボックスサイズの計算を直感的にする */
+    box-sizing: border-box; /* ボックスサイズの計算をより直感的にする */
 }
 
-/* 全体のフォントと背景設定 */
 body {
-    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Sans", "ヒラギノ角ゴシック", "Meiryo", sans-serif;
+    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Sans", "ヒラギノ角ゴシック", "Meiryo", sans-serif; /* フォントスタイルを設定 */
     background-image: url('../images/background.jpg');
     background-size: cover;
 }
 
-/* 画面上部のナビゲーション */
 nav {
     display: flex;
     justify-content: space-between; /* ロゴとリンクを左右に配置 */
     align-items: center; /* ナビゲーションバー内のアイテムを垂直方向に中央揃え */
-    background-color: white;
-    height: 80px;
+    background-color: white; /* ナビゲーションバーの背景色を白に設定 */
+    padding: 0;
+    height: 80px; /* ナビゲーションバー全体の高さを100pxに設定 */
     width: 100%;
     position: fixed; /* ナビゲーションバーを画面上部に固定 */
     top: 0;
     z-index: 1000; /* ナビゲーションバーを前面に配置 */
 }
 
-/* メインコンテンツの上部マージン */
 main {
-    padding-top: 80px; /* 固定ナビゲーションバー分の余白を確保 */
+    padding-top: 80px;
 }
 
-/* 各セクションのタイトル */
 h2 {
-    color: #fff;
-    background-color: #333;
-    padding: 10px 20px;
-    margin: 0;
-    text-align: center;
-    width: 100%;
+    color: #fff; /* 文字色を白に設定 */
+    background-color: #333; /* 背景色を黒に設定 */
+    padding: 10px 20px; /* 上下に10px、左右に20pxのパディングを追加 */
+    margin: 0; /* 上下の余白を削除 */
+    text-align: center; /* テキストを中央に配置 */
+    width: 100%; /* 横幅を100%に設定 */
     box-sizing: border-box; /* パディングを含む幅を指定 */
 }
 
-/* ロゴのスタイル */
 .logo {
     text-decoration: none;
-    color: black;
-    font-size: 40px;
-    font-weight: bold;
-    padding-left: 20px;
+    color: black; /* ロゴのテキスト色を黒に設定 */
+    font-size: 40px; /* ロゴのフォントサイズを40pxに設定 */
+    font-weight: bold; /* ロゴのテキストを太字に設定 */
+    padding-left: 20px; /* ロゴの左側に20pxの余白を追加 */
 }
 
-/* ナビゲーションリンクの設定 */
 .nav-links {
-    list-style: none;
-    display: flex;
-    margin-left: auto;
-    height: 100%;
+    list-style: none; /* リストのデフォルトのスタイルを無効に設定 */
+    display: flex; /* リンクを横並びに配置 */
+    margin-left: auto; /* リンクを右端に配置 */
+    height: 100%; /* リンクの高さをナビゲーションバー全体と同じに設定 */
 }
 
 .nav-links li {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    justify-content: center; /* テキストを横方向に中央揃え */
+    align-items: center; /* リンクテキストを縦方向に中央揃え */
+    height: 100%; /* リンクアイテムの高さをナビゲーションバー全体と同じに設定 */
 }
 
 .nav-links a {
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 0;
+    color: black; /* リンクテキストの色を黒に設定 */
+    text-decoration: none; /* リンクの下線を削除 */
+    font-size: 20px; /* リンクテキストのフォントサイズを20pxに設定 */
+    padding: 0; /* リンクの左右に40pxの余白を設定し、クリック可能な領域を拡大 */
     width: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
+    display: flex; /* リンクテキストを中央揃えするためにフレックスボックスを使用 */
+    justify-content: center; /* テキストを横方向に中央揃え */
+    align-items: center; /* リンクテキストを縦方向に中央揃え */
+    height: 100%; /* リンク全体の高さをナビゲーションバーと同じに設定 */
+    text-align: center; /* リンクテキストを中央に揃える */
 }
 
-/* ナビゲーションのアクティブリンクの装飾 */
+.nav-links .active a {
+    position: relative; /* 擬似要素の位置を正しく配置するためにrelativeを設定 */
+}
+
 .nav-links .active a::after {
     content: '';
     position: absolute;
     bottom: 0px;
     left: 0;
     width: 100%; /* リンクの幅に合わせる */
-    height: 5px;
-    background-color: yellow;
+    height: 5px; /* 高さ5ピクセルの長方形 */
+    background-color: yellow; /* 長方形の色を黄色に設定 */
 }
 
-/* モバイル用のハンバーガーメニュー */
+.contact {
+    background-color: gray; /* CONTACTリンクの背景色を灰色に設定 */
+    color: gray;
+    display: flex;
+    justify-content: center; /* テキストを横方向に中央揃え */
+    align-items: center; /* テキストを縦方向に中央揃え */
+    padding: 0; /* CONTACTリンクの左右に40pxの余白を追加 */
+    height: 100%; /* CONTACTリンクの高さをナビゲーションバー全体と同じに設定 */
+}
+
 .burger {
-    display: none;
+    display: none; /* デスクトップではハンバーガーメニューを非表示に設定 */
     cursor: pointer;
-    padding-right: 20px;
+    padding-right: 20px; /* ハンバーガーメニューを右端に配置 */
 }
 
 .burger div {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-    transition: all 0.3s ease;
+    width: 35px; /* ハンバーガーメニューの棒の幅を35pxに設定 */
+    height: 5px; /* ハンバーガーメニューの棒の高さを5pxに設定 */
+    background-color: black; /* ハンバーガーメニューの棒の色を黒に設定 */
+    margin: 6px 0; /* 棒同士の間に6pxの間隔を追加 */
+    transition: all 0.3s ease; /* ハンバーガーメニューのアニメーションを設定 */
 }
 
-/* 画面幅が940px以下の際の設定 */
 @media screen and (max-width: 940px) {
     nav {
-        height: 80px;
+        height: 80px; /* モバイル表示時のナビゲーションバーの高さを80pxに設定 */
     }
 
     .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 80px;
-        left: -100%;
-        transition: all 0.5s ease;
+        display: none; /* モバイルではリンクを最初に非表示に設定 */
+        flex-direction: column; /* モバイル表示時にはリンクを縦方向に並べる */
+        width: 100%; /* リンクリストの幅を100%に設定 */
+        position: absolute; /* 絶対位置に配置 */
+        top: 80px; /* ナビゲーションバーの下に表示 */
+        left: -100%; /* 初期状態では画面外に配置 */
+        transition: all 0.5s ease; /* メニューのスライドアニメーションを設定 */
     }
 
     .nav-links li {
         text-align: center;
-        margin: 15px 0;
-        width: 100%;
-        height: auto;
+        margin: 15px 0; /* 各リンクアイテムの上下に15pxの余白を追加 */
+        width: 100%; /* リンクアイテムの幅を100%に設定 */
+        height: auto; /* リンクアイテムの高さを自動に設定 */
     }
 
     .nav-links a {
-        font-size: 20px;
-        padding: 30px 50px;
-        height: auto;
+        font-size: 20px; /* モバイル表示時のリンクテキストを大きく設定 */
+        padding: 30px 50px; /* モバイル表示時のリンクに十分なクリック領域を確保 */
+        height: auto; /* モバイル表示時のリンクの高さを自動に設定 */
     }
 
     .burger {
-        display: block;
+        display: block; /* モバイル表示時にはハンバーガーメニューを表示 */
     }
 }
 
-/* ホームページのトップイメージ */
 img.home-image {
     width: 100%;
 }
 
-/* 企業理念セクション */
+h3 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+h3.revolution {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+h3.AI {
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+h3.topnews-title {
+    font-size: 24px;
+    color: white;
+    white-space: nowrap; /* テキストを1行に制限 */
+    overflow: hidden; /* はみ出したテキストを非表示 */
+    text-overflow: ellipsis; /* はみ出した部分を省略記号に */
+}
+
 .circle-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* 子要素を横に並べるためにflexboxを使用 */
+    justify-content: center; /* 円同士を左右均等に配置 */
+    align-items: center; /* 垂直方向に中央揃え */
     margin: 30px auto;
 }
 
 .circle {
-    width: 300px;
-    height: 300px;
+    width: 300px; /* 円の幅を設定 */
+    height: 300px; /* 円の高さを設定 */
     margin: 0 20px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    color: black;
-    text-align: center;
-    border: 2px solid #d3d3d3;
-    box-shadow: 0 0 10px 5px rgba(211, 211, 211, 0.5);
+    border-radius: 50%; /* 丸くするためにborder-radiusを50%に設定 */
+    display: flex; /* フレックスボックスを使用して中央揃え */
+    flex-direction: column; /* 要素を縦に並べる */
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+    font-size: 20px; /* テキストのフォントサイズを設定 */
+    color: black; /* テキストの色を設定 */
+    text-align: center; /* テキストを中央に揃える */
+    border: 2px solid #d3d3d3; /* 枠線を薄いグレーに設定 */
+    box-shadow: 0 0 10px 5px rgba(211, 211, 211, 0.5); /* 薄いグレーでぼやけた影を追加 */
     background-color: white;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* 変形アニメーションのトランジションを設定 */
 }
 
 .circle:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* カーソルを合わせたときに110%に拡大 */
 }
+
 
 span.and {
     font-size: 50px;
 }
 
-/* ニュースセクション */
+h2.pickup-news {
+    margin-top: 50px;
+}
+
 .news-container {
     margin-top: 50px;
     display: flex;
-    padding: 20px 30px;
+    padding: 20px 30px; /* 左右に30pxの余白を追加 */
     height: 350px;
 }
 
 .news-left {
-    width: 50%;
+    width: 50%; /* 左側のニュース部分を半分使用 */
     position: relative;
     margin-right: 20px;
-    overflow: hidden;
+    overflow: hidden; /* 子要素がはみ出さないようにする */
 }
 
 .top-news-link {
@@ -197,10 +227,10 @@ span.and {
     width: 100%;
     height: 100%;
     position: relative;
-    background-image: url('../images/top-news.jpeg');
-    background-size: cover;
-    background-position: center;
-    transition: opacity 0.3s ease;
+    background-image: url('../images/top-news.jpeg'); /* 背景画像を設定 */
+    background-size: cover; /* 画像の縦横比を維持しつつ全体をカバー */
+    background-position: center; /* 画像の中央を表示 */
+    transition: opacity 0.3s ease; /* ホバー時のエフェクトをスムーズに */
 }
 
 .top-news-overlay {
@@ -209,11 +239,11 @@ span.and {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* 黒いオーバーレイ */
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; /* ホバー時のエフェクトをスムーズに */
 }
 
 .top-news-overlay h2 {
@@ -222,19 +252,19 @@ span.and {
     text-align: center;
     font-weight: bold;
     padding: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: opacity 0.3s ease;
+    white-space: nowrap; /* テキストを1行に制限 */
+    overflow: hidden; /* はみ出したテキストを非表示 */
+    text-overflow: ellipsis; /* はみ出した部分を省略記号に */
+    transition: opacity 0.3s ease; /* ホバー時のエフェクトをスムーズに */
 }
 
 .news-left:hover .top-news-link,
 .news-left:hover .top-news-overlay h2 {
-    opacity: 0.7;
+    opacity: 0.7; /* ホバー時に画像とテキストが薄くなる */
 }
 
 .news-right {
-    width: 50%;
+    width: 50%; /* 右側のニュース部分を半分使用 */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -254,30 +284,30 @@ span.and {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px; /* リンク全体にクリックエリアを広げる */
     text-decoration: none;
     color: black;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #f9f9f9; /* 背景色を設定 */
+    border-radius: 5px; /* 角を少し丸める */
+    transition: background-color 0.3s ease, color 0.3s ease; /* ホバー時のエフェクトをスムーズに */
 }
 
 .news-list a:hover {
-    background-color: #e0e0e0;
-    color: rgba(0, 0, 0, 0.7);
+    background-color: #e0e0e0; /* 背景色を薄く変更 */
+    color: rgba(0, 0, 0, 0.7); /* テキスト色を薄くする */
 }
 
 .news-text {
     flex-grow: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: nowrap; /* テキストを1行に制限 */
+    overflow: hidden; /* はみ出したテキストを非表示 */
+    text-overflow: ellipsis; /* はみ出した部分を省略記号に */
 }
 
 .arrow {
     font-weight: bold;
-    margin-left: 10px;
-    flex-shrink: 0;
+    margin-left: 10px; /* テキストと矢印の間に余白を追加 */
+    flex-shrink: 0; /* 矢印が縮まないように設定 */
 }
 
 .view-more {
@@ -293,61 +323,65 @@ span.and {
     text-decoration: underline;
 }
 
-/* サービスセクション */
+h2.service {
+    margin-top: 50px;
+}
+
 .service-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 50px auto;
-    width: 100%;
-    padding: 0 20px;
+    flex-direction: column; /* ボックスを縦に並べる */
+    align-items: center; /* 中央寄せ */
+    margin: 50px auto; /* 上下に余白を追加し、中央寄せ */
+    width: 100%; /* コンテナの幅を100%に設定 */
+    padding: 0 20px; /* サービスコンテナに左右の余白を追加 */
 }
 
 .service-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+    text-decoration: none; /* リンクの下線を削除 */
+    color: inherit; /* リンクテキストの色を継承 */
+    display: block; /* リンク全体をクリック可能にするためにブロック要素に設定 */
     height: 100%;
     margin: 50px auto;
 }
 
+
 .service-box {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 800px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 0px;
-    padding: 20px;
-    transition: transform 0.3s ease-in-out;
+    justify-content: space-between; /* テキストと画像を左右に配置 */
+    align-items: center; /* 垂直方向に中央揃え */
+    width: 800px; /* ボックスの幅を800pxに固定 */
+    background-color: #f9f9f9; /* 背景色を設定 */
+    border-radius: 10px; /* 角を丸める */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ぼやけた影を追加 */
+    margin-bottom: 0px; /* 各ボックスの間に余白を追加 */
+    padding: 20px; /* 内部に余白を追加 */
+    transition: transform 0.3s ease-in-out; /* ホバー時のエフェクトをスムーズに */
 }
 
 .service-text {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    flex-grow: 1;
-    position: relative;
-    padding-left: 20px;
-    padding-right: 20px;
+    font-size: 32px; /* テキストのフォントサイズを設定 */
+    font-weight: bold; /* テキストを太字に設定 */
+    color: #333; /* テキスト色を設定 */
+    text-align: center; /* テキストを中央寄せに設定 */
+    flex-grow: 1; /* 余ったスペースをテキストに割り当て */
+    position: relative; /* 擬似要素を相対位置にするために必要 */
+    padding-left: 20px; /* テキストの左側に余白を追加 */
+    padding-right: 20px; /* テキストの右側に余白を追加 */
 }
 
 .service-image img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
+    width: 100px; /* 正方形の画像の幅を設定 */
+    height: 100px; /* 正方形の画像の高さを設定 */
+    object-fit: cover; /* 画像の縦横比を維持しつつ全体をカバー */
+    border-radius: 10px; /* 画像の角を丸める */
 }
 
 .service-box:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* ホバー時に少し拡大 */
 }
 
 .service-box:hover .service-text::after {
-    width: 80%;
+    width: 80%; /* ホバー時にアンダーラインを表示 */
 }
 
 .service-text::after {
@@ -359,32 +393,35 @@ span.and {
     width: 0;
     height: 3px;
     background-color: black;
-    transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out; /* アンダーラインのフェードインを設定 */
 }
 
-/* フッター */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 20px;
+    background-color: #333; /* フッターの背景色をダークグレーに設定 */
+    color: #fff; /* テキストの色を白に設定 */
+    padding: 40px 20px; /* フッター全体にパディングを追加 */
     font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Sans", "ヒラギノ角ゴシック", "Meiryo", sans-serif;
 }
 
 .footer-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-wrap: wrap; /* 画面幅が狭い場合、コンテンツが折り返されるようにする */
+    justify-content: space-between; /* 要素間のスペースを均等に配置 */
+    align-items: flex-start; /* 要素を上部に揃える */
+    max-width: 1200px; /* コンテナの最大幅を1200pxに設定 */
+    margin: 0 auto; /* コンテナを中央に配置 */
 }
 
 .footer-logo img {
-    width: 150px;
+    width: 150px; /* ロゴ画像の幅を設定 */
+}
+
+.footer-links {
+    margin: 20px 0;
 }
 
 .footer-nav {
-    list-style: none;
+    list-style: none; /* リストマーカーを削除 */
     padding: 0;
 }
 
@@ -393,17 +430,18 @@ footer {
 }
 
 .footer-nav a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: #fff; /* リンクの色を白に設定 */
+    text-decoration: none; /* リンクの下線を削除 */
+    transition: color 0.3s ease; /* ホバー時の色変化をスムーズにする */
+    height: 100%;
 }
 
 .footer-nav a:hover {
-    color: #f1c40f;
+    color: #f1c40f; /* ホバー時に色を変更 */
 }
 
 .footer-contact p {
-    margin: 10px 0;
+    margin: 10px 0; /* 連絡先情報の各行に上下のマージンを追加 */
 }
 
 .footer-bottom {
@@ -413,17 +451,17 @@ footer {
 }
 
 .footer-bottom p {
-    margin: 0;
+    margin: 0; /* フッターボトムのパラグラフの余白を削除 */
 }
 
 /* contact.html 用の追加スタイル */
 .contact-section {
-    margin: 80px auto;
+    margin: 80px auto; /* 上部の余白を確保し、全体を中央揃え */
     padding: 20px;
-    max-width: 800px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* セクションの最大幅を設定 */
+    background-color: #f9f9f9; /* 背景色を設定 */
+    border-radius: 10px; /* 角を丸める */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ぼやけた影を追加 */
 }
 
 .contact-section h2 {
@@ -442,8 +480,8 @@ footer {
 
 .contact-form {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; /* フォーム内の要素を縦に並べる */
+    gap: 20px; /* 各要素間に20pxの間隔を追加 */
 }
 
 .form-group {
@@ -463,27 +501,27 @@ footer {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s ease;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* 内側の影を追加 */
+    transition: border-color 0.3s ease; /* フォーカス時のアニメーションを設定 */
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #333;
-    outline: none;
+    border-color: #333; /* フォーカス時にボーダーの色を変更 */
+    outline: none; /* デフォルトのフォーカスリングを削除 */
 }
 
 .submit-button {
     padding: 15px;
     font-size: 18px;
     color: #fff;
-    background-color: #333;
+    background-color: #333; /* ボタンの背景色を設定 */
     border: none;
-    border-radius: 5px;
+    border-radius: 5px; /* 角を丸める */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* ホバー時の背景色変更をスムーズに */
 }
 
 .submit-button:hover {
-    background-color: #555;
+    background-color: #555; /* ホバー時に背景色を変更 */
 }
