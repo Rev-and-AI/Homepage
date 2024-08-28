@@ -38,6 +38,11 @@ nav {
     height: 100%; /* リンクの高さをナビゲーションバー全体と同じに設定 */
 }
 
+.nav-links a:hover {
+    background-color: #e0e0e0; /* 背景色を薄く変更 */
+    color: rgba(0, 0, 0, 0.8); /* テキスト色を薄くする */
+}
+
 .nav-links li {
     display: flex;
     justify-content: center; /* テキストを横方向に中央揃え */
