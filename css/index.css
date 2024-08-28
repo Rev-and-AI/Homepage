@@ -1,0 +1,270 @@
+main {
+    padding-top: 80px;
+}
+
+h2 {
+    color: #fff; /* 文字色を白に設定 */
+    background-color: #333; /* 背景色を黒に設定 */
+    padding: 10px 20px; /* 上下に10px、左右に20pxのパディングを追加 */
+    margin: 0; /* 上下の余白を削除 */
+    text-align: center; /* テキストを中央に配置 */
+    width: 100%; /* 横幅を100%に設定 */
+    box-sizing: border-box; /* パディングを含む幅を指定 */
+}
+
+img.home-image {
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+h3.revolution {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+h3.AI {
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+h3.topnews-title {
+    font-size: 24px;
+    color: white;
+    white-space: nowrap; /* テキストを1行に制限 */
+    overflow: hidden; /* はみ出したテキストを非表示 */
+    text-overflow: ellipsis; /* はみ出した部分を省略記号に */
+}
+
+.circle-container {
+    display: flex; /* 子要素を横に並べるためにflexboxを使用 */
+    justify-content: center; /* 円同士を左右均等に配置 */
+    align-items: center; /* 垂直方向に中央揃え */
+    margin: 30px auto;
+}
+
+.circle {
+    width: 300px; /* 円の幅を設定 */
+    height: 300px; /* 円の高さを設定 */
+    margin: 0 20px;
+    border-radius: 50%; /* 丸くするためにborder-radiusを50%に設定 */
+    display: flex; /* フレックスボックスを使用して中央揃え */
+    flex-direction: column; /* 要素を縦に並べる */
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+    font-size: 20px; /* テキストのフォントサイズを設定 */
+    color: black; /* テキストの色を設定 */
+    text-align: center; /* テキストを中央に揃える */
+    border: 2px solid #d3d3d3; /* 枠線を薄いグレーに設定 */
+    box-shadow: 0 0 10px 5px rgba(211, 211, 211, 0.5); /* 薄いグレーでぼやけた影を追加 */
+    background-color: white;
+    transition: transform 0.3s ease; /* 変形アニメーションのトランジションを設定 */
+}
+
+.circle:hover {
+    transform: scale(1.1); /* カーソルを合わせたときに110%に拡大 */
+}
+
+
+span.and {
+    font-size: 50px;
+}
+
+h2.pickup-news {
+    margin-top: 100px;
+}
+
+.news-container {
+    margin-top: 50px;
+    display: flex;
+    padding: 20px 30px; /* 左右に30pxの余白を追加 */
+    height: 350px;
+}
+
+.news-left {
+    width: 50%; /* 左側のニュース部分を半分使用 */
+    position: relative;
+    margin-right: 20px;
+    overflow: hidden; /* 子要素がはみ出さないようにする */
+}
+
+.top-news-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url('../images/top-news.jpeg'); /* 背景画像を設定 */
+    background-size: cover; /* 画像の縦横比を維持しつつ全体をカバー */
+    background-position: center; /* 画像の中央を表示 */
+    transition: opacity 0.3s ease; /* ホバー時のエフェクトをスムーズに */
+}
+
+.top-news-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 黒いオーバーレイ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease; /* ホバー時のエフェクトをスムーズに */
+}
+
+.top-news-overlay h2 {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    white-space: nowrap; /* テキストを1行に制限 */
+    overflow: hidden; /* はみ出したテキストを非表示 */
+    text-overflow: ellipsis; /* はみ出した部分を省略記号に */
+    transition: opacity 0.3s ease; /* ホバー時のエフェクトをスムーズに */
+}
+
+.news-left:hover .top-news-link,
+.news-left:hover .top-news-overlay h2 {
+    opacity: 0.7; /* ホバー時に画像とテキストが薄くなる */
+}
+
+.news-right {
+    width: 50%; /* 右側のニュース部分を半分使用 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.newstab-news-list {
+    width: 100%;
+}
+
+.news-list li {
+    margin-bottom: 15px;
+}
+
+.news-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* リンク全体にクリックエリアを広げる */
+    text-decoration: none;
+    color: black;
+    background-color: #f9f9f9; /* 背景色を設定 */
+    border-radius: 5px; /* 角を少し丸める */
+    transition: background-color 0.3s ease, color 0.3s ease; /* ホバー時のエフェクトをスムーズに */
+}
+
+.news-list a:hover {
+    background-color: #e0e0e0; /* 背景色を薄く変更 */
+    color: rgba(0, 0, 0, 0.7); /* テキスト色を薄くする */
+}
+
+.news-text {
+    flex-grow: 1;
+    white-space: nowrap; /* テキストを1行に制限 */
+    overflow: hidden; /* はみ出したテキストを非表示 */
+    text-overflow: ellipsis; /* はみ出した部分を省略記号に */
+}
+
+.arrow {
+    font-weight: bold;
+    margin-left: 10px; /* テキストと矢印の間に余白を追加 */
+    flex-shrink: 0; /* 矢印が縮まないように設定 */
+}
+
+.view-more {
+    align-self: flex-end;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}
+
+h2.service {
+    margin-top: 50px;
+}
+
+.service-container {
+    display: flex;
+    flex-direction: column; /* ボックスを縦に並べる */
+    align-items: center; /* 中央寄せ */
+    margin: 50px auto; /* 上下に余白を追加し、中央寄せ */
+    width: 100%; /* コンテナの幅を100%に設定 */
+    padding: 0 20px; /* サービスコンテナに左右の余白を追加 */
+}
+
+.service-link {
+    text-decoration: none; /* リンクの下線を削除 */
+    color: inherit; /* リンクテキストの色を継承 */
+    display: block; /* リンク全体をクリック可能にするためにブロック要素に設定 */
+    height: 100%;
+    margin: 50px auto;
+}
+
+
+.service-box {
+    display: flex;
+    justify-content: space-between; /* テキストと画像を左右に配置 */
+    align-items: center; /* 垂直方向に中央揃え */
+    width: 800px; /* ボックスの幅を800pxに固定 */
+    background-color: #f9f9f9; /* 背景色を設定 */
+    border-radius: 10px; /* 角を丸める */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ぼやけた影を追加 */
+    margin-bottom: 0px; /* 各ボックスの間に余白を追加 */
+    padding: 20px; /* 内部に余白を追加 */
+    transition: transform 0.3s ease-in-out; /* ホバー時のエフェクトをスムーズに */
+}
+
+.service-text {
+    font-size: 32px; /* テキストのフォントサイズを設定 */
+    font-weight: bold; /* テキストを太字に設定 */
+    color: #333; /* テキスト色を設定 */
+    text-align: center; /* テキストを中央寄せに設定 */
+    flex-grow: 1; /* 余ったスペースをテキストに割り当て */
+    position: relative; /* 擬似要素を相対位置にするために必要 */
+    padding-left: 20px; /* テキストの左側に余白を追加 */
+    padding-right: 20px; /* テキストの右側に余白を追加 */
+}
+
+.service-image img {
+    width: 100px; /* 正方形の画像の幅を設定 */
+    height: 100px; /* 正方形の画像の高さを設定 */
+    object-fit: cover; /* 画像の縦横比を維持しつつ全体をカバー */
+    border-radius: 10px; /* 画像の角を丸める */
+}
+
+.service-box:hover {
+    transform: scale(1.05); /* ホバー時に少し拡大 */
+}
+
+.service-box:hover .service-text::after {
+    width: 80%; /* ホバー時にアンダーラインを表示 */
+}
+
+.service-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: black;
+    transition: width 0.3s ease-in-out; /* アンダーラインのフェードインを設定 */
+}
