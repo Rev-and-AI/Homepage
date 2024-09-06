@@ -39,8 +39,7 @@ nav {
 }
 
 .nav-links a:hover {
-    background-color: #e0e0e0; /* 背景色を薄く変更 */
-    color: rgba(0, 0, 0, 0.8); /* テキスト色を薄くする */
+    color: rgba(0, 0, 0, 0.5); /* テキスト色を薄くする */
 }
 
 .nav-links li {
