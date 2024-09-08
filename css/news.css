@@ -1,9 +1,27 @@
+h2 {
+    color: #333; /* 文字色を黒に設定 */
+    padding: 10px 20px; /* 上下に10px、左右に20pxのパディングを追加 */
+    text-align: center; /* テキストを中央に配置 */
+    width: 100%; /* 横幅を100%に設定 */
+    box-sizing: border-box; /* パディングを含む幅を指定 */
+}
+
+.pickup-news{
+    font-size: 14px;
+    border-radius: 30px;
+    border: 1px solid black;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 1.5em;
+}
+
 #HERO {
     background-color: #f4f4f4;
     padding: 40px; /* 余白を増やします */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 50px; /* セクション全体を下げます */
+    margin-top: 80px; /* セクション全体を下げます */
+    margin-bottom: 100px;
 }
 
 .hero-bnr {
@@ -12,12 +30,14 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    /* padding: 100px; */
+    margin-top: 10px;
 }
 
-.icon_title {
+.icon-title {
     display: flex;
     align-items: center;
-    gap: 20px; /* 余白を増やします */
+    gap: 50px; /* 余白を増やします */
 }
 
 .icon img {
@@ -44,11 +64,9 @@
     font-weight: 300; /* 文字を細くします */
 }
 
-.news-right {
-    width: 50%; /* 右側のニュース部分を半分使用 */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.news-container{
+    margin: auto;
+    width: 70%;
 }
 
 .news-list {
@@ -57,15 +75,11 @@
     margin: 0;
 }
 
-.newstab-news-list {
-    width: 100%;
-}
-
 .news-list li {
     margin-bottom: 15px;
 }
 
-.news-list a {
+.news-list dl {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -77,9 +91,14 @@
     transition: background-color 0.3s ease, color 0.3s ease; /* ホバー時のエフェクトをスムーズに */
 }
 
-.news-list a:hover {
+.news-list dl:hover {
     background-color: #e0e0e0; /* 背景色を薄く変更 */
     color: rgba(0, 0, 0, 0.7); /* テキスト色を薄くする */
+}
+
+.news-list dt{
+    width: 100px;
+    margin-right: 30px;
 }
 
 .news-text {
