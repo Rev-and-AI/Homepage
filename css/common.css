@@ -6,7 +6,7 @@
 
 body {
     font-family: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN W3", "Hiragino Sans", "ヒラギノ明朝体", "Meiryo", "MS PMincho", sans-serif;
-    background-image: url('./images/background.jpg');
+    background-image: url('../images/background.jpg');
     background-size: cover;
 }
 
