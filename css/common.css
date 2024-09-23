@@ -6,7 +6,7 @@
 
 body {
     font-family: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN W3", "Hiragino Sans", "ヒラギノ明朝体", "Meiryo", "MS PMincho", sans-serif;
-    background-image: url('../images/background.jpg');
+    background-image: url('./images/background.jpg');
     background-size: cover;
 }
 
@@ -137,7 +137,7 @@ footer {
     background-color: #333; /* フッターの背景色をダークグレーに設定 */
     color: #fff; /* テキストの色を白に設定 */
     padding: 40px 20px; /* フッター全体にパディングを追加 */
-    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Sans", "ヒラギノ角ゴシック", "Meiryo", sans-serif;
+    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Sans", "ヒラギノ角ゴシック", "Meiryo", "MS PMincho", sans-serif;
 }
 
 .footer-container {
