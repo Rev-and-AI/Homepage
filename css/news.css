@@ -96,11 +96,6 @@ h2 {
     color: rgba(0, 0, 0, 0.7); /* テキスト色を薄くする */
 }
 
-.news-list dt{
-    width: 100px;
-    margin-right: 30px;
-}
-
 .news-text {
     flex-grow: 1;
     white-space: nowrap; /* テキストを1行に制限 */
@@ -112,4 +107,28 @@ h2 {
     font-weight: bold;
     margin-left: 10px; /* テキストと矢印の間に余白を追加 */
     flex-shrink: 0; /* 矢印が縮まないように設定 */
+}
+
+.date {
+    width: 100px;
+    margin-right: 30px;
+}
+
+.label {
+    width: 100px;
+    color: #e0e0e0;
+    padding: 8px;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.pressrelease {
+    background-color: rgb(0, 153, 255);
+}
+
+.topics {
+    background-color: rgb(255, 0, 234);
 }
