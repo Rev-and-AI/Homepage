@@ -1,0 +1,100 @@
+main {
+    padding-top: 80px;
+    padding-bottom: 80px
+}
+
+.service-title {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.service-border {
+    width: 60%;
+    margin: 5px auto;
+    height: 1.5px; /* 太さの調整 */
+    border: none; /* ボーダーを削除 */
+    background-color: black; /* 線の色を設定 */
+}
+
+.service-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hologram-card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.hologram-card .card-front,
+.hologram-card .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none; /* 通常のボーダーを削除 */
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1); /* ぼやけたエフェクト */
+}
+
+.hologram-card .card-front {
+    background: rgba(255, 255, 255);
+}
+
+.hologram-card .card-back {
+    background: rgba(0, 0, 0, 0.6);
+    transform: rotateY(180deg);
+    color: white;
+}
+
+.hologram-card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.hologram-card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+.modal {
+    display: none; /* モーダルは初期状態では非表示 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
