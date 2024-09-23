@@ -2,6 +2,11 @@ main {
     padding-top: 80px;
 }
 
+h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
 h2 {
     color: #fff; /* 文字色を白に設定 */
     background-color: #333; /* 背景色を黒に設定 */
@@ -12,8 +17,37 @@ h2 {
     box-sizing: border-box; /* パディングを含む幅を指定 */
 }
 
-img.home-image {
+.home-image-container {
+    position: relative; /* 親要素を相対配置に設定 */
+    width: 100%; /* コンテナの幅を全体に合わせる */
+}
+
+.home-image {
     width: 100%;
+    opacity: 0.9;
+    display: block; /* 画像の下に余白を追加しないためにブロック表示 */
+}
+
+.home-image-container::after {
+    content: ''; /* 擬似要素を作成 */
+    position: absolute; /* 親要素内に絶対配置 */
+    top: 0;
+    left: 0;
+    width: 100%; /* 親要素全体に広げる */
+    height: 100%; /* 親要素全体に広げる */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒い背景 */
+    z-index: 1; /* オーバーレイを前面に表示 */
+}
+
+.image-text {
+    position: absolute; /* テキストを絶対配置に設定 */
+    top: 50%; /* 垂直方向に中央揃え */
+    left: 50%; /* 水平方向に中央揃え */
+    transform: translate(-50%, -50%); /* 完全に中央に配置 */
+    color: white; /* テキストの色を白に設定 */
+    font-weight: bold; /* テキストを太字に設定 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* テキストに影をつけて見やすくする */
+    z-index: 20;
 }
 
 h3 {
