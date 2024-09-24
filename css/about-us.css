@@ -1,0 +1,149 @@
+main {
+    padding-top: 80px;
+}
+
+
+.about-us-container {
+    font-size: 1.1rem;
+    padding: 0 70px;
+}
+
+
+/* ヒーロー */
+.content-hero {
+    text-align: center;
+    font-size: 2.8rem;
+    padding: 3rem;
+}
+
+
+/* セクション */
+.content-section {
+    padding: 10px 0;
+}
+.content-section-heading {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.heading-border {
+    width: 60vw;
+    margin: 5px auto;
+    height: 1.5px;
+    border: none;
+    background-color: black;
+}
+
+
+/* 理念 */
+.content-philosophy {
+    padding: 10px 20px;
+}
+.philosophy-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    text-align: center;
+    border-top: dotted 1px;
+    border-bottom: dotted 1px;
+    backdrop-filter: blur(10px);
+}
+
+
+/* 社長メッセージ */
+.content-message {
+    padding: 10px 20px;
+}
+.message-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    text-align: center;
+    border-top: dotted 1px;
+    border-bottom: dotted 1px;
+    backdrop-filter: blur(10px);
+}
+.message-image img {
+    width: 100%;
+}
+
+
+/* アクセス */ 
+.content-access {
+    padding: 10px 20px;
+}
+.access-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    border-top: dotted 1px;
+    border-bottom: dotted 1px;
+    backdrop-filter: blur(5px);
+}
+.access-detail {
+    width: 25%;
+    padding: 0.5rem 0.5rem;
+    font-size: 0.9rem;
+}
+.access-detail p {
+    font-size: 1.1rem;
+}
+.access-map {
+    width: 50%;
+    height: 50vh;
+}
+.access-map iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 会社概要 */
+.content-outline {
+    padding: 10px 20px;
+}
+.outline-table {
+    width: 80%;
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
+    border-collapse: collapse;
+}
+.outline-row {
+    border-top: dotted 1px;
+    border-bottom: dotted 1px;
+}
+.outline-title, .outline-detail {
+    text-align: center;
+    font-weight: normal;
+    padding: 0.5rem 0.5rem;
+}
+.outline-title {
+    width: 25%;
+}
+
+
+/* 沿革 */
+.content-history {
+    padding: 10px 20px;
+}
+.history-table {
+    width: 80%;
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
+    border-collapse: collapse;
+}
+.history-row {
+    border-top: dotted 1px;
+    border-bottom: dotted 1px;
+}
+.history-date, .history-detail {
+    text-align: center;
+    font-weight: normal;
+    padding: 0.5rem 0.5rem;
+}
+.history-date {
+    width: 25%;
+}
