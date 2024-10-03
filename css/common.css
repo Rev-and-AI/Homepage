@@ -31,6 +31,11 @@ nav {
     padding-left: 20px; /* ロゴの左側に20pxの余白を追加 */
 }
 
+.logo-image{
+    width: 80%;
+    margin-top: 15px;
+}
+
 .nav-links {
     list-style: none; /* リストのデフォルトのスタイルを無効に設定 */
     display: flex; /* リンクを横並びに配置 */

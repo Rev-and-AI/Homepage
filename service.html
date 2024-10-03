@@ -8,14 +8,15 @@
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <!-- CSSファイルへのリンクを修正 -->
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/service.css">
 </head>
 <body>
     <nav>
         <div class="logo">
-            <a href="index.html">ロゴ</a>
+            <a href="index.html">
+                <img src="./images/ロゴ.png" class="logo-image">
+            </a>
         </div>
         <ul class="nav-links" style="list-style: none;">
             <li><a href="index.html" title="TOP">TOP</a></li>
@@ -41,32 +42,26 @@
         <h2 class="service-title">提供サービス一覧</h2>
         <hr class="service-border">
         <div class="service-container">
-            <!-- 3Dカード1 -->
-            <div class="hologram-card">
-                <div class="card-inner">
-                    <div class="card-front glitch">
-                        <h2>データ分析</h2>
+            <a href="services/data-consulting.html" class="service-link">
+                <div class="service-box">
+                    <div class="service-text">
+                        データ分析事業
                     </div>
-                    <a href="services/data-consulting.html">
-                        <div class="card-back">
-                            <p>ビッグデータを駆使した<br>高度なデータ分析を<br>提供します。</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <!-- 3Dカード2 -->
-            <div class="hologram-card">
-                <div class="card-inner">
-                    <div class="card-front glitch">
-                        <h2>生成AI</h2>
+                    <div class="service-image">
+                        <img src="./images/data-analyze.jpeg" alt="データ分析事業の画像">
                     </div>
-                    <a href="services/ai-saas.html">
-                        <div class="card-back">
-                            <p>最先端の生成AI技術を<br>活用し、革新的な<br>ソリューションを<br>実現します。</p>
-                        </div>
-                    </a>
                 </div>
-            </div>
+            </a>
+            <a href="services/ai-saas.html" class="service-link">
+                <div class="service-box">
+                    <div class="service-image">
+                        <img src="./images/AI.png" alt="SaaS型生成AI事業の画像">
+                    </div>
+                    <div class="service-text">
+                        SaaS型生成AI事業
+                    </div>
+                </div>
+            </a>
         </div>
     </main>
 

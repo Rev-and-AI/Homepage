@@ -4,8 +4,8 @@ main {
 }
 
 .service-title {
-    padding-top: 80px;
     text-align: center;
+    padding-top: 80px;
 }
 
 .service-border {
@@ -14,87 +14,74 @@ main {
     height: 1.5px; /* 太さの調整 */
     border: none; /* ボーダーを削除 */
     background-color: black; /* 線の色を設定 */
+    margin-bottom: 80px;
 }
 
 .service-container {
     display: flex;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* ボックスを縦に並べる */
+    align-items: center; /* 中央寄せ */
+    margin: 50px auto; /* 上下に余白を追加し、中央寄せ */
+    width: 100%; /* コンテナの幅を100%に設定 */
+    padding: 0 20px; /* サービスコンテナに左右の余白を追加 */
 }
 
-.hologram-card {
-    width: 200px;
-    height: 300px;
-    perspective: 1000px;
-    cursor: pointer;
-    position: relative;
-    padding-top: 40px;
-    padding-bottom: 20px;
-}
-
-.hologram-card .card-front,
-.hologram-card .card-back {
-    width: 100%;
+.service-link {
+    text-decoration: none; /* リンクの下線を削除 */
+    color: inherit; /* リンクテキストの色を継承 */
+    display: block; /* リンク全体をクリック可能にするためにブロック要素に設定 */
     height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transition: transform 0.3s;
+    margin: 50px auto;
+}
+
+
+.service-box {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    border: none; /* 通常のボーダーを削除 */
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1); /* ぼやけたエフェクト */
+    justify-content: space-between; /* テキストと画像を左右に配置 */
+    align-items: center; /* 垂直方向に中央揃え */
+    width: 800px; /* ボックスの幅を800pxに固定 */
+    background-color: #f9f9f9; /* 背景色を設定 */
+    border-radius: 10px; /* 角を丸める */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ぼやけた影を追加 */
+    margin-bottom: 0px; /* 各ボックスの間に余白を追加 */
+    padding: 20px; /* 内部に余白を追加 */
+    transition: transform 0.3s ease-in-out; /* ホバー時のエフェクトをスムーズに */
 }
 
-.hologram-card .card-front {
-    background: rgba(255, 255, 255);
+.service-text {
+    font-size: 32px; /* テキストのフォントサイズを設定 */
+    font-weight: bold; /* テキストを太字に設定 */
+    color: #333; /* テキスト色を設定 */
+    text-align: center; /* テキストを中央寄せに設定 */
+    flex-grow: 1; /* 余ったスペースをテキストに割り当て */
+    position: relative; /* 擬似要素を相対位置にするために必要 */
+    padding-left: 20px; /* テキストの左側に余白を追加 */
+    padding-right: 20px; /* テキストの右側に余白を追加 */
 }
 
-.hologram-card .card-back {
-    background: rgba(0, 0, 0, 0.6);
-    transform: rotateY(180deg);
-    color: white;
+.service-image img {
+    width: 100px; /* 正方形の画像の幅を設定 */
+    height: 100px; /* 正方形の画像の高さを設定 */
+    object-fit: cover; /* 画像の縦横比を維持しつつ全体をカバー */
+    border-radius: 10px; /* 画像の角を丸める */
 }
 
-.hologram-card:hover .card-front {
-    transform: rotateY(180deg);
+.service-box:hover {
+    transform: scale(1.05); /* ホバー時に少し拡大 */
 }
 
-.hologram-card:hover .card-back {
-    transform: rotateY(0deg);
+.service-box:hover .service-text::after {
+    width: 80%; /* ホバー時にアンダーラインを表示 */
 }
 
-.modal {
-    display: none; /* モーダルは初期状態では非表示 */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: #222;
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    color: #fff;
-    max-width: 400px;
-    width: 90%;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-}
-
-.close-button {
+.service-text::after {
+    content: '';
     position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 2rem;
-    cursor: pointer;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: black;
+    transition: width 0.3s ease-in-out; /* アンダーラインのフェードインを設定 */
 }
-
