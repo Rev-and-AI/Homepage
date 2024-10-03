@@ -25,6 +25,7 @@ nav {
 
 .logo {
     text-decoration: none;
+    background-image: url('../images/ロゴ.png');
     color: black; /* ロゴのテキスト色を黒に設定 */
     font-size: 40px; /* ロゴのフォントサイズを40pxに設定 */
     font-weight: bold; /* ロゴのテキストを太字に設定 */
