@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Sans", "ヒラギノ角ゴシック", "Meiryo", sans-serif; /* フォントスタイルを設定 */
+    font-family: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN W3", "Hiragino Sans", "ヒラギノ明朝体", "Meiryo", "MS PMincho", sans-serif;
     background-image: url('../images/background.jpg');
     background-size: cover;
 }
@@ -31,6 +31,11 @@ nav {
     padding-left: 20px; /* ロゴの左側に20pxの余白を追加 */
 }
 
+.logo-image{
+    width: 80%;
+    margin-top: 15px;
+}
+
 .nav-links {
     list-style: none; /* リストのデフォルトのスタイルを無効に設定 */
     display: flex; /* リンクを横並びに配置 */
@@ -39,8 +44,7 @@ nav {
 }
 
 .nav-links a:hover {
-    background-color: #e0e0e0; /* 背景色を薄く変更 */
-    color: rgba(0, 0, 0, 0.8); /* テキスト色を薄くする */
+    color: rgba(0, 0, 0, 0.5); /* テキスト色を薄くする */
 }
 
 .nav-links li {
@@ -55,7 +59,7 @@ nav {
     text-decoration: none; /* リンクの下線を削除 */
     font-size: 20px; /* リンクテキストのフォントサイズを20pxに設定 */
     padding: 0; /* リンクの左右に40pxの余白を設定し、クリック可能な領域を拡大 */
-    width: 180px;
+    width: 200px;
     display: flex; /* リンクテキストを中央揃えするためにフレックスボックスを使用 */
     justify-content: center; /* テキストを横方向に中央揃え */
     align-items: center; /* リンクテキストを縦方向に中央揃え */
@@ -138,7 +142,7 @@ footer {
     background-color: #333; /* フッターの背景色をダークグレーに設定 */
     color: #fff; /* テキストの色を白に設定 */
     padding: 40px 20px; /* フッター全体にパディングを追加 */
-    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Sans", "ヒラギノ角ゴシック", "Meiryo", sans-serif;
+    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Sans", "ヒラギノ角ゴシック", "Meiryo", "MS PMincho", sans-serif;
 }
 
 .footer-container {
@@ -190,4 +194,30 @@ footer {
 
 .footer-bottom p {
     margin: 0; /* フッターボトムのパラグラフの余白を削除 */
+}
+
+.breadcrumb {
+    width: 100%; /* 幅を100%に設定 */
+    height: 30px; /* 高さを10pxに設定 */
+    display: flex; /* パンくずリストを横並びにする */
+    align-items: center; /* 垂直方向に中央揃え */
+    padding: 0; /* パディングを0に設定 */
+    font-size: 12px; /* テキストのフォントサイズを小さめに設定 */
+    color: #555; /* テキストの色を設定 */
+    background-color: #f1f1f1; /* 背景色を設定 */
+    box-sizing: border-box; /* パディングを含む幅を指定 */
+    position: relative; /* 他の要素の影響を受けないように相対位置に設定 */
+    top: 80px; /* ナビゲーションバーの高さ分下に配置 */
+    margin: 0; /* 上下の余白を削除 */
+    padding-left: 10%;
+}
+
+.breadcrumb a {
+    text-decoration: none; /* リンクの下線を削除 */
+    color: black; /* リンクの色を設定 */
+    margin: 0 5px; /* リンク間に余白を追加 */
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline; /* ホバー時に下線を表示 */
 }
