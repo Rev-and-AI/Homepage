@@ -132,3 +132,68 @@ h2 {
 .topics {
     background-color: rgb(255, 0, 234);
 }
+
+a {
+    text-decoration: none;
+    color: inherit; /* 必要に応じてリンクの色も継承 */
+}
+
+/* 全体のページスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 記事全体の余白と幅設定 */
+.article {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 記事の日付スタイル */
+.article-date {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+/* 記事のタイトルスタイル */
+.article h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #222;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* 記事本文のスタイル */
+.article-contents p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* メディアクエリ：スマートフォンやタブレット向け */
+@media (max-width: 768px) {
+    .article {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .article h2 {
+        font-size: 1.5em;
+    }
+
+    .article-contents p {
+        font-size: 1em;
+    }
+}
