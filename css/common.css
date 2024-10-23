@@ -139,7 +139,7 @@ nav {
 }
 
 footer {
-    background-color: #333; /* フッターの背景色をダークグレーに設定 */
+    background-color: #7d7878; /* フッターの背景色をダークグレーに設定 */
     color: #fff; /* テキストの色を白に設定 */
     padding: 40px 20px; /* フッター全体にパディングを追加 */
     font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Sans", "ヒラギノ角ゴシック", "Meiryo", "MS PMincho", sans-serif;
