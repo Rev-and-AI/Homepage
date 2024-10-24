@@ -10,6 +10,16 @@
 
         <link rel="stylesheet" href="./css/common.css">
         <link rel="stylesheet" href="./css/contact.css">
+        <script>
+            // フォーム送信前に確認ダイアログを表示
+            function confirmSubmission(event) {
+                const confirmation = confirm("本当に送信しますか？");
+                if (!confirmation) {
+                    // ユーザーがキャンセルした場合、送信を中止する
+                    event.preventDefault();
+                }
+            }
+        </script>
     </head>
     <body>
         <nav>
@@ -42,7 +52,7 @@
                 <h2>お問い合わせ</h2>
                 <p>株式会社Rev&AIへのご質問やご相談は、以下のフォームよりお送りください。</p>
 
-                <form class="contact-form">
+                <form class="contact-form" action="contact.php" method="POST" onsubmit="confirmSubmission(event)">
                     <div class="form-group">
                         <label for="name">お名前</label>
                         <input type="text" id="name" name="name" required>
@@ -59,6 +69,9 @@
                         <label for="message">お問い合わせ内容</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
+
+                    <!-- CSRFトークンを隠しフィールドに追加 -->
+                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                     <button type="submit" class="submit-button">送信</button>
                 </form>
             </section>
@@ -82,8 +95,8 @@
                 </div>
                 <div class="footer-contact">
                     <p>〒123-4567 東京都渋谷区神南1-2-3</p>
-                    <p>電話: 03-1234-5678</p>
-                    <p>メール: info@rev-ai.co.jp</p>
+                    <p>電話: 080-5705-3534</p>
+                    <p>メール: revai.info@gmail.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
