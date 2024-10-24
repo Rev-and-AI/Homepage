@@ -45,13 +45,21 @@ h1:not(.policy-title) {
     font-size: 40px; /* ロゴのフォントサイズを40pxに設定 */
     font-weight: bold; /* ロゴのテキストを太字に設定 */
     padding-left: 20px; /* ロゴの左側に20pxの余白を追加 */
-    max-width: 100%;
 }
 
-.logo-image{
+.logo-image {
     width: 160px;
     margin-top: 15px;
+    height: 80px;
+    object-fit: cover;
 }
+
+.logo-footer {
+    width: 160px;
+    height: 80px;
+    object-fit: cover;
+}
+
 
 .nav-links {
     list-style: none; /* リストのデフォルトのスタイルを無効に設定 */
