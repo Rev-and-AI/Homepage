@@ -1,3 +1,7 @@
+main {
+    padding-top: 80px;
+}
+
 h2 {
     color: #333; /* 文字色を黒に設定 */
     padding: 10px 20px; /* 上下に10px、左右に20pxのパディングを追加 */
@@ -46,12 +50,12 @@ h2 {
     border-radius: 50%; /* 画像を丸く切り抜きます */
 }
 
-.text h1 {
-    font-size: 2.5em; /* アルファベットの文字を大きくします */
+/*.text h1 {
+    font-size: 2.5em;
     color: #333;
-    font-family: 'Roboto', sans-serif; /* スタイリッシュなフォントに変更します */
-    font-weight: 300; /* 文字を細くします */
-}
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}*/
 
 .text .en {
     font-weight: 300; /* 文字を細くします */
@@ -139,14 +143,14 @@ a {
 }
 
 /* 全体のページスタイル */
-body {
+/*body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-}
+}*/
 
 /* 記事全体の余白と幅設定 */
 .article {
